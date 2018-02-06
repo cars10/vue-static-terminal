@@ -2,10 +2,10 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: path.resolve(__dirname + '/src/components/StaticTerminal.vue'),
+  entry: path.resolve(__dirname + '/../src/components/StaticTerminal.vue'),
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
+    path: path.resolve(__dirname, '../dist'),
+    publicPath: '../dist/',
     filename: 'vue-static-terminal.min.js',
     library: 'vue-static-terminal',
     libraryTarget: 'umd',
