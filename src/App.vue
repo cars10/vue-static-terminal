@@ -1,9 +1,16 @@
 <template>
   <div>
-    App
+    <h1>Static terminal test</h1>
+    <static-terminal></static-terminal>
   </div>
 </template>
 
 <script>
-  export default {  }
+  import StaticTerminal from './components/StaticTerminal.vue'
+
+  export default {
+    components: {
+      StaticTerminal
+    }
+  }
 </script>
