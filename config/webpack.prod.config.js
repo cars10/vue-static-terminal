@@ -1,5 +1,5 @@
-var path = require('path')
-var webpack = require('webpack')
+const path = require('path')
+const webpack = require('webpack')
 
 module.exports = {
   entry: path.resolve(__dirname + '/../src/components/StaticTerminal.vue'),
