@@ -19,15 +19,7 @@
     import StaticTerminalBody from './staticTerminal/StaticTerminalBody.vue'
 
     export default {
-        props: {
-            commands: {
-                default: () => {
-                    return [
-                        {command: 'whoami', result: 'carsten'},
-                    ]
-                }
-            },
-        },
+        props: ['commands'],
         components: {
             StaticTerminalHeader,
             StaticTerminalBody
