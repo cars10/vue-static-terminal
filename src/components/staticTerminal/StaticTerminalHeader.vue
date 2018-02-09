@@ -1,23 +1,34 @@
 <template>
     <div class="static_terminal__header">
-        <span>Terminal</span>
-        <span class="right">-&nbsp;&nbsp;x</span>
+        <span v-html="text"></span>
+        <span class="flex-right" v-html="toolbar"></span>
     </div>
 </template>
 
 <style scoped>
     .static_terminal__header {
-        min-height: 20px;
-        padding: 4px 6px;
+        padding: 4px 8px 4px 6px;
         background-color: #555;
-        border-radius: inherit
+        border-radius: inherit;
+        display: flex;
+        flex-direction: row;
     }
 
-    .right {
-        float: right
+    .flex-right {
+        margin-left: auto;
     }
 </style>
 
 <script>
-    export default {}
+    export default {
+        props: {
+            text: {
+                default: 'Terminal'
+            },
+            toolbar: {
+                default: '<svg width="10" height="10" style="fill: #d3d3d3"><circle cx="50%" cy="50%" r="5"></circle></svg>\n' +
+                '<svg width="10" height="10" style="fill: #fff"><circle cx="50%" cy="50%" r="5"></circle></svg>'
+            }
+        }
+    }
 </script>
