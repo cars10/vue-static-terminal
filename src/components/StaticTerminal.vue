@@ -1,7 +1,7 @@
 <template>
     <div class="static_terminal">
         <static-terminal-header></static-terminal-header>
-        <static-terminal-body :commandBlocks="commandBlocks"></static-terminal-body>
+        <static-terminal-body :commands="commands"></static-terminal-body>
     </div>
 </template>
 
@@ -20,7 +20,7 @@
 
     export default {
         props: {
-            commandBlocks: {
+            commands: {
                 default: () => {
                     return [
                         {command: 'whoami', result: 'carsten'},

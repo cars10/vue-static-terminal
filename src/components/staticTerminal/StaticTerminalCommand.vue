@@ -1,7 +1,7 @@
 <template>
     <div class="static_terminal__command">
-        <span class="prompt">{{ this.prompt }}</span>
-        <span class="command">{{ this.command }}</span>
+        <span class="prompt" v-html="prompt"></span>
+        <span class="command" v-html="command"></span>
     </div>
 </template>
 
@@ -11,9 +11,7 @@
             prompt: {
                 default: '$'
             },
-            command: {
-                default: 'ls'
-            }
+            command: {}
         }
     }
 </script>

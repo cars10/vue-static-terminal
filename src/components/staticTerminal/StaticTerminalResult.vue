@@ -1,15 +1,9 @@
 <template>
-    <div>
-        {{ this.result }}
-    </div>
+    <div v-html="result"></div>
 </template>
 
 <script>
     export default {
-        props: {
-            result: {
-                default: 'file1 file2'
-            }
-        }
+        props: ['result']
     }
 </script>

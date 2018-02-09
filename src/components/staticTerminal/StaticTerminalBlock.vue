@@ -1,7 +1,7 @@
 <template>
     <div>
-        <static-terminal-command :prompt="commandBlock.prompt" :command="commandBlock.command"></static-terminal-command>
-        <static-terminal-result :result="commandBlock.result"></static-terminal-result>
+        <static-terminal-command :prompt="command.prompt" :command="command.command"></static-terminal-command>
+        <static-terminal-result :result="command.result"></static-terminal-result>
     </div>
 </template>
 
@@ -11,7 +11,7 @@
 
     export default {
         props: [
-            'commandBlock'
+            'command'
         ],
         components: {
             StaticTerminalCommand,

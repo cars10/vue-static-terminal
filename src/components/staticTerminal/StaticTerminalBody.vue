@@ -1,7 +1,7 @@
 <template>
     <div class="static_terminal__body">
-        <static-terminal-block v-for="commandBlock in commandBlocks"
-                               :commandBlock="commandBlock"></static-terminal-block>
+        <static-terminal-block v-for="command in commands"
+                               :command="command"></static-terminal-block>
     </div>
 </template>
 
@@ -10,10 +10,6 @@
         min-height: 50px;
         padding: 4px 6px;
     }
-
-    .static_terminal__body--fixed {
-        overflow: scroll
-    }
 </style>
 
 <script>
@@ -21,7 +17,7 @@
 
     export default {
         props: [
-            'commandBlocks',
+            'commands',
             'size'
         ],
         components: {
