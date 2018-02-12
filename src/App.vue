@@ -60,24 +60,23 @@
                         text: 'My Terminal',
                         toolbar: '&#x2501;&nbsp;&nbsp;&#x2716;'
                     },
-                    commands:
-                        [
-                            {
-                                prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
-                                command: 'whoami',
-                                result: 'root'
-                            },
-                            {
-                                prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
-                                command: 'uname -r',
-                                result: '4.15.1-2-ARCH'
-                            },
-                            {
-                                prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
-                                command: 'ls -a',
-                                result: 'README.MD .gitignore'
-                            },
-                        ]
+                    commands: [
+                        {
+                            prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
+                            command: 'whoami',
+                            result: 'root'
+                        },
+                        {
+                            prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
+                            command: 'uname -r',
+                            result: '4.15.1-2-ARCH'
+                        },
+                        {
+                            prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
+                            command: 'ls -a',
+                            result: 'README.MD .gitignore'
+                        },
+                    ]
                 },
             }
         },
