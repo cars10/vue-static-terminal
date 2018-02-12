@@ -22,9 +22,7 @@
 <script>
     export default {
         props: {
-            text: {
-                default: 'Terminal'
-            },
+            text: {},
             toolbar: {
                 default: '<svg width="10" height="10" style="fill: #d3d3d3"><circle cx="50%" cy="50%" r="5"></circle></svg>\n' +
                 '<svg width="10" height="10" style="fill: #fff"><circle cx="50%" cy="50%" r="5"></circle></svg>'

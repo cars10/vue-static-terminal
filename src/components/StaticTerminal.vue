@@ -1,6 +1,6 @@
 <template>
     <div class="static_terminal">
-        <static-terminal-header></static-terminal-header>
+        <static-terminal-header :text="header.text" :toolbar="header.toolbar"></static-terminal-header>
         <static-terminal-body :commands="commands"></static-terminal-body>
     </div>
 </template>
@@ -19,7 +19,14 @@
     import StaticTerminalBody from './staticTerminal/StaticTerminalBody.vue'
 
     export default {
-        props: ['commands'],
+        props: {
+            header: {
+                default: () => {
+                    return {}
+                }
+            },
+            commands: {}
+        },
         components: {
             StaticTerminalHeader,
             StaticTerminalBody
