@@ -2,7 +2,7 @@
   "name": "vue-static-terminal",
   "version": "1.0.0",
   "description": "Static terminal component written in vue.js",
-  "main": "dist/vue-static-terminal.min.js",
+  "main": "dist/vue-static-terminal.js",
   "scripts": {
     "build": "webpack --config ./config/webpack.prod.config.js",
     "dev": "webpack-dev-server --config ./config/webpack.dev.config.js"
@@ -31,6 +31,7 @@
     "vue-loader": "^14.0.3",
     "vue-template-compiler": "^2.5.13",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack-dev-server": "^2.11.1",
+    "webpack-merge": "^4.1.1"
   }
 }

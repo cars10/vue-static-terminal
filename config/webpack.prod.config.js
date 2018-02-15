@@ -1,19 +1,12 @@
 const path = require('path')
 const webpack = require('webpack')
+const merge = require('webpack-merge');
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
-module.exports = {
-    entry: {
-        'vue-static-terminal': path.resolve(__dirname + '/../src/components/StaticTerminal.vue'),
-        'vue-static-terminal.min': path.resolve(__dirname + '/../src/components/StaticTerminal.vue')
-    },
+const config = {
     output: {
         path: path.resolve(__dirname, '../dist'),
         publicPath: '../dist/',
-        filename: '[name].js',
-        library: 'vue-static-terminal',
-        libraryTarget: 'umd',
-        umdNamedDefine: true
     },
     module: {
         loaders: [
@@ -45,3 +38,32 @@ module.exports = {
         new ExtractTextPlugin('vue-static-terminal.css')
     ]
 }
+
+/**
+ * We create to different js bundles
+ * * vue-static-terminal.min.js
+ *      The minimized bundle registers the component globally on +window+ and should be used for setups without npm.
+ *      You can include that file directly via script tag and use the component via +Vue.use(VueStaticTerminal)+
+ *
+ * * vue-static-terminal.js
+ *      This is the umd library to use when including the component via npm.
+ */
+module.exports = [
+    merge(config, {
+        entry: path.resolve(__dirname + '/../src/plugin.js'),
+        output: {
+            filename: 'vue-static-terminal.min.js',
+            libraryTarget: 'window',
+            library: 'VueStaticTerminal',
+        }
+    }),
+    merge(config, {
+        entry: path.resolve(__dirname + '/../src/components/StaticTerminal.vue'),
+        output: {
+            filename: 'vue-static-terminal.js',
+            libraryTarget: 'umd',
+            library: 'vue-static-terminal',
+            umdNamedDefine: true
+        }
+    })
+];
