@@ -5,7 +5,7 @@
     </div>
 </template>
 
-<style scoped>
+<style>
     .static_terminal__header {
         padding: 4px 8px 4px 6px;
         background-color: #555;

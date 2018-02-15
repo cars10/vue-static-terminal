@@ -5,7 +5,7 @@
     </div>
 </template>
 
-<style scoped>
+<style>
     .static_terminal {
         background-color: #333;
         border-radius: 2px;

@@ -1,10 +1,10 @@
 <template>
     <div class="static_terminal__body">
-        <static-terminal-block v-for="command in commands" :command="command"></static-terminal-block>
+        <static-terminal-block v-for="(command, _, index) in commands" :command="command" :key="index"></static-terminal-block>
     </div>
 </template>
 
-<style scoped>
+<style>
     .static_terminal__body {
         min-height: 50px;
         padding: 4px 6px;

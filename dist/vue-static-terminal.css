@@ -1,0 +1,23 @@
+
+.static_terminal {
+    background-color: #333;
+    border-radius: 2px;
+    color: #fff;
+    font-family: monospace;
+}
+
+.static_terminal__header {
+    padding: 4px 8px 4px 6px;
+    background-color: #555;
+    border-radius: inherit;
+    display: flex;
+    flex-direction: row;
+}
+.flex-right {
+    margin-left: auto;
+}
+
+.static_terminal__body {
+    min-height: 50px;
+    padding: 4px 6px;
+}
