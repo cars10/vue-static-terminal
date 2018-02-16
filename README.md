@@ -8,7 +8,7 @@
 
 ### Via npm
 
-First add it to your `package.json`
+First add it to your `package.json`:
 
 ```bash
 npm install vue-static-terminal --save
@@ -16,13 +16,13 @@ npm install vue-static-terminal --save
 yarn add vue-static-terminal
 ```
 
-Then import the component js
+Then import the component js:
 
 ```javascript
 import VueStaticTerminal from 'vue-static-terminal'
 ```
 
-And the styles
+And the styles. Alternatively copy the styles to your project and customize them.
 
 ```javascript
 import 'vue-static-terminal/dist/vue-static-terminal.css'
@@ -30,7 +30,7 @@ import 'vue-static-terminal/dist/vue-static-terminal.css'
 
 ### Manually via `<script>` tag
 
-Download the minified version in `dist/vue-static-terminal.min.js` and the css in `dist/vue-static-terminal.css`, then add it to your site:
+If you don't use npm you can download the minified version in `dist/vue-static-terminal.min.js` and the css in `dist/vue-static-terminal.css`, then add it to your site:
 
 ```html
 <link rel="stylesheet" href="vue-static-terminal.css">
@@ -56,7 +56,7 @@ Use the component:
 
 ## Examples
 
-Also see [the codepen with examples](https://codepen.io/cars10/pen/KQXxdQ)
+Also see [the codepen with examples](https://codepen.io/cars10/pen/KQXxdQ).
 
 Empty terminal
 ```html
