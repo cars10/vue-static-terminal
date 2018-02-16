@@ -19,12 +19,10 @@
     </div>
 
     <div class="row">
-      <div class="col">
-        Fully custom
+      <div class="col" style="box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);">
         <static-terminal :header="customExample.header" :commands="customExample.commands"
                          :prompt="customExample.prompt"></static-terminal>
       </div>
-      <div class="col"></div>
       <div class="col"></div>
     </div>
   </div>
@@ -67,7 +65,7 @@
         ],
         customExample: {
           header: {
-            text: 'My Terminal',
+            text: 'someTerm',
             toolbar: '&#x2501;&nbsp;&nbsp;&#x2716;'
           },
           prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
@@ -77,14 +75,20 @@
               result: 'root'
             },
             {
-              prompt: '<svg width="15" height="10" style="fill: #f00"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
               command: 'uname -r',
               result: '4.15.1-2-ARCH'
             },
             {
               command: 'ls -a',
-              result: 'README.MD .gitignore'
+              result: '<strong>.</strong>&nbsp;&nbsp;<strong>..</strong>&nbsp;&nbsp;README.MD&nbsp;&nbsp;.gitignore&nbsp;&nbsp;<strong>src</strong>'
             },
+            {
+              command: 'asdf',
+              result: 'command not found: asdf'
+            },
+            {
+              prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon><line x1="2" y1="2" x2="8" y2="8" style="stroke:#f00; stroke-width:2"></line><line x1="2" y1="8" x2="8" y2="2" style="stroke:#f00; stroke-width:2"></line></svg>'
+            }
           ]
         },
       }
