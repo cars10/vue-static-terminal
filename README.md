@@ -111,15 +111,15 @@ export default {
 
 ## API
 
-The component accepts three props:
+The component accepts the following three props with the following attributes:
 
 * `header`
+    * `text`
+    * `toolbar`
 * `prompt`
 * `commands`
+    * `prompt`
+    * `command`
+    * `result`
 
 None of these are required. All attributes can contain html entities.
-
-**header**
-| Attributes |  Default | Example |
-| ------------ | ---------- | --------- |
-| text       | `''`     | `'xterm'` |
