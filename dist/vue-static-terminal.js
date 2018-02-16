@@ -192,7 +192,7 @@ function normalizeComponent (
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _StaticTerminalHeader = __webpack_require__(9);
@@ -206,18 +206,19 @@ var _StaticTerminalBody2 = _interopRequireDefault(_StaticTerminalBody);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-    props: {
-        header: {
-            default: function _default() {
-                return {};
-            }
-        },
-        commands: {}
+  props: {
+    header: {
+      default: function _default() {
+        return {};
+      }
     },
-    components: {
-        StaticTerminalHeader: _StaticTerminalHeader2.default,
-        StaticTerminalBody: _StaticTerminalBody2.default
-    }
+    prompt: {},
+    commands: {}
+  },
+  components: {
+    StaticTerminalHeader: _StaticTerminalHeader2.default,
+    StaticTerminalBody: _StaticTerminalBody2.default
+  }
 };
 
 /***/ }),
@@ -228,15 +229,15 @@ exports.default = {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.default = {
-    props: {
-        text: {},
-        toolbar: {
-            default: '<svg width="10" height="10" style="fill: #d3d3d3"><circle cx="50%" cy="50%" r="5"></circle></svg>\n' + '<svg width="10" height="10" style="fill: #fff"><circle cx="50%" cy="50%" r="5"></circle></svg>'
-        }
+  props: {
+    text: {},
+    toolbar: {
+      default: '<svg width="10" height="10" style="fill: #d3d3d3"><circle cx="50%" cy="50%" r="5"></circle></svg>\n' + '<svg width="10" height="10" style="fill: #fff"><circle cx="50%" cy="50%" r="5"></circle></svg>'
     }
+  }
 };
 
 /***/ }),
@@ -247,7 +248,7 @@ exports.default = {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _StaticTerminalBlock = __webpack_require__(14);
@@ -257,16 +258,17 @@ var _StaticTerminalBlock2 = _interopRequireDefault(_StaticTerminalBlock);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-    props: {
-        commands: {
-            default: function _default() {
-                return [{}];
-            }
-        }
+  props: {
+    commands: {
+      default: function _default() {
+        return [{}];
+      }
     },
-    components: {
-        StaticTerminalBlock: _StaticTerminalBlock2.default
-    }
+    prompt: {}
+  },
+  components: {
+    StaticTerminalBlock: _StaticTerminalBlock2.default
+  }
 };
 
 /***/ }),
@@ -277,7 +279,7 @@ exports.default = {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _StaticTerminalCommand = __webpack_require__(15);
@@ -291,11 +293,11 @@ var _StaticTerminalResult2 = _interopRequireDefault(_StaticTerminalResult);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.default = {
-    props: ['command'],
-    components: {
-        StaticTerminalCommand: _StaticTerminalCommand2.default,
-        StaticTerminalResult: _StaticTerminalResult2.default
-    }
+  props: ['command', 'prompt'],
+  components: {
+    StaticTerminalCommand: _StaticTerminalCommand2.default,
+    StaticTerminalResult: _StaticTerminalResult2.default
+  }
 };
 
 /***/ }),
@@ -306,15 +308,15 @@ exports.default = {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.default = {
-    props: {
-        prompt: {
-            default: '$'
-        },
-        command: {}
-    }
+  props: {
+    prompt: {
+      default: '$'
+    },
+    command: {}
+  }
 };
 
 /***/ }),
@@ -325,10 +327,10 @@ exports.default = {
 
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.default = {
-    props: ['result']
+  props: ['result']
 };
 
 /***/ }),
@@ -787,7 +789,10 @@ var render = function() {
     "div",
     [
       _c("static-terminal-command", {
-        attrs: { prompt: _vm.command.prompt, command: _vm.command.command }
+        attrs: {
+          prompt: _vm.command.prompt || _vm.prompt,
+          command: _vm.command.command
+        }
       }),
       _vm._v(" "),
       _c("static-terminal-result", { attrs: { result: _vm.command.result } })
@@ -821,7 +826,7 @@ var render = function() {
     _vm._l(_vm.commands, function(command, _, index) {
       return _c("static-terminal-block", {
         key: index,
-        attrs: { command: command }
+        attrs: { command: command, prompt: _vm.prompt }
       })
     })
   )
@@ -854,7 +859,9 @@ var render = function() {
         attrs: { text: _vm.header.text, toolbar: _vm.header.toolbar }
       }),
       _vm._v(" "),
-      _c("static-terminal-body", { attrs: { commands: _vm.commands } })
+      _c("static-terminal-body", {
+        attrs: { prompt: _vm.prompt, commands: _vm.commands }
+      })
     ],
     1
   )
