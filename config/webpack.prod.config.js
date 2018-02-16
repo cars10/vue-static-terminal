@@ -4,39 +4,39 @@ const merge = require('webpack-merge');
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 const config = {
-    output: {
-        path: path.resolve(__dirname, '../dist'),
-        publicPath: '../dist/',
-    },
-    module: {
-        loaders: [
-            {
-                test: /\.vue$/,
-                loader: 'vue-loader',
-                options: {
-                    extractCSS: true,
-                    minimize: true
-                }
-            },
-            {
-                test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/
-            }
-        ]
-    },
-    plugins: [
-        new webpack.optimize.UglifyJsPlugin({
-            include: /\.min\.js$/,
-            minimize: true,
-            sourceMap: false,
-            mangle: true,
-            compress: {
-                warnings: false
-            }
-        }),
-        new ExtractTextPlugin('vue-static-terminal.css')
+  output: {
+    path: path.resolve(__dirname, '../dist'),
+    publicPath: '../dist/',
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.vue$/,
+        loader: 'vue-loader',
+        options: {
+          extractCSS: true,
+          minimize: true
+        }
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      }
     ]
+  },
+  plugins: [
+    new webpack.optimize.UglifyJsPlugin({
+      include: /\.min\.js$/,
+      minimize: true,
+      sourceMap: false,
+      mangle: true,
+      compress: {
+        warnings: false
+      }
+    }),
+    new ExtractTextPlugin('vue-static-terminal.css')
+  ]
 }
 
 /**
@@ -49,21 +49,21 @@ const config = {
  *      This is the umd library to use when including the component via npm.
  */
 module.exports = [
-    merge(config, {
-        entry: path.resolve(__dirname + '/../src/plugin.js'),
-        output: {
-            filename: 'vue-static-terminal.min.js',
-            libraryTarget: 'window',
-            library: 'VueStaticTerminal',
-        }
-    }),
-    merge(config, {
-        entry: path.resolve(__dirname + '/../src/components/StaticTerminal.vue'),
-        output: {
-            filename: 'vue-static-terminal.js',
-            libraryTarget: 'umd',
-            library: 'vue-static-terminal',
-            umdNamedDefine: true
-        }
-    })
+  merge(config, {
+    entry: path.resolve(__dirname + '/../src/plugin.js'),
+    output: {
+      filename: 'vue-static-terminal.min.js',
+      libraryTarget: 'window',
+      library: 'VueStaticTerminal',
+    }
+  }),
+  merge(config, {
+    entry: path.resolve(__dirname + '/../src/components/StaticTerminal.vue'),
+    output: {
+      filename: 'vue-static-terminal.js',
+      libraryTarget: 'umd',
+      library: 'vue-static-terminal',
+      umdNamedDefine: true
+    }
+  })
 ];

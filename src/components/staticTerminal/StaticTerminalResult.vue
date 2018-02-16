@@ -1,9 +1,9 @@
 <template>
-    <div v-html="result"></div>
+  <div v-html="result"></div>
 </template>
 
 <script>
-    export default {
-        props: ['result']
-    }
+  export default {
+    props: ['result']
+  }
 </script>

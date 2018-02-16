@@ -1,35 +1,35 @@
 <template>
-    <div class="static_terminal">
-        <static-terminal-header :text="header.text" :toolbar="header.toolbar"></static-terminal-header>
-        <static-terminal-body :commands="commands"></static-terminal-body>
-    </div>
+  <div class="static_terminal">
+    <static-terminal-header :text="header.text" :toolbar="header.toolbar"></static-terminal-header>
+    <static-terminal-body :commands="commands"></static-terminal-body>
+  </div>
 </template>
 
 <style>
-    .static_terminal {
-        background-color: #333;
-        border-radius: 2px;
-        color: #fff;
-        font-family: monospace;
-    }
+  .static_terminal {
+    background-color: #333;
+    border-radius: 2px;
+    color: #fff;
+    font-family: monospace;
+  }
 </style>
 
 <script>
-    import StaticTerminalHeader from './staticTerminal/StaticTerminalHeader.vue'
-    import StaticTerminalBody from './staticTerminal/StaticTerminalBody.vue'
+  import StaticTerminalHeader from './staticTerminal/StaticTerminalHeader.vue'
+  import StaticTerminalBody from './staticTerminal/StaticTerminalBody.vue'
 
-    export default {
-        props: {
-            header: {
-                default: () => {
-                    return {}
-                }
-            },
-            commands: {}
-        },
-        components: {
-            StaticTerminalHeader,
-            StaticTerminalBody
+  export default {
+    props: {
+      header: {
+        default: () => {
+          return {}
         }
+      },
+      commands: {}
+    },
+    components: {
+      StaticTerminalHeader,
+      StaticTerminalBody
     }
+  }
 </script>
