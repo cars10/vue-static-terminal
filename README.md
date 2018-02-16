@@ -108,3 +108,19 @@ export default {
   }
 }
 ```
+
+## API
+
+The component accepts three props:
+
+* `header`
+* `prompt`
+* `commands`
+
+None of these are required. All attributes can contain html entities.
+
+**header**
+| Attributes |  Default | Example |
+|------------|---------------------------------------|---------|
+| text       | `''`     | `'xterm'` |
+| toolbar    |          |           |
