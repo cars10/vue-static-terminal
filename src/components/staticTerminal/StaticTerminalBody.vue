@@ -1,7 +1,7 @@
 <template>
   <div class="static_terminal__body">
     <static-terminal-block v-for="(command, _, index) in commands" :command="command"
-                           :key="index"></static-terminal-block>
+                           :key="index" :prompt="prompt"></static-terminal-block>
   </div>
 </template>
 
@@ -21,7 +21,8 @@
         default: () => {
           return [{}]
         }
-      }
+      },
+      prompt: {}
     },
     components: {
       StaticTerminalBlock

@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Static terminal test</h1>
-    <div class="grid">
+    <div class="row">
       <div class="col">
         Empty default
         <static-terminal></static-terminal>
@@ -13,9 +13,19 @@
       </div>
 
       <div class="col">
-        Fully custom
-        <static-terminal :header="customExample.header" :commands="customExample.commands"></static-terminal>
+        Custom prompt
+        <static-terminal :commands="basicExample" :prompt="'#'"></static-terminal>
       </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        Fully custom
+        <static-terminal :header="customExample.header" :commands="customExample.commands"
+                         :prompt="customExample.prompt"></static-terminal>
+      </div>
+      <div class="col"></div>
+      <div class="col"></div>
     </div>
   </div>
 </template>
@@ -25,7 +35,7 @@
     font-family: sans-serif;
   }
 
-  .grid {
+  .row {
     display: flex;
   }
 
@@ -60,19 +70,18 @@
             text: 'My Terminal',
             toolbar: '&#x2501;&nbsp;&nbsp;&#x2716;'
           },
+          prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
           commands: [
             {
-              prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
               command: 'whoami',
               result: 'root'
             },
             {
-              prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
+              prompt: '<svg width="15" height="10" style="fill: #f00"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
               command: 'uname -r',
               result: '4.15.1-2-ARCH'
             },
             {
-              prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
               command: 'ls -a',
               result: 'README.MD .gitignore'
             },

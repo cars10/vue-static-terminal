@@ -1,7 +1,7 @@
 <template>
   <div class="static_terminal">
     <static-terminal-header :text="header.text" :toolbar="header.toolbar"></static-terminal-header>
-    <static-terminal-body :commands="commands"></static-terminal-body>
+    <static-terminal-body :prompt="prompt" :commands="commands"></static-terminal-body>
   </div>
 </template>
 
@@ -25,6 +25,7 @@
           return {}
         }
       },
+      prompt: {},
       commands: {}
     },
     components: {
