@@ -44,7 +44,13 @@ Loading the minified version will automatically register the component `VueStati
 Load the component:
 
 ```javascript
+// globally
 Vue.use(VueStaticTerminal)
+
+// per component
+export default {
+  components: {VueStaticTerminal}
+}
 ```
 
 Use the component:
@@ -113,13 +119,6 @@ export default {
 
 The component accepts the following three props with the following attributes:
 
-* `header`
-    * `text`
-    * `toolbar`
-* `prompt`
-* `commands`
-    * `prompt`
-    * `command`
-    * `result`
-
 None of these are required. All attributes can contain html entities.
+
+<strong>test</strong>1&nbsp;2
