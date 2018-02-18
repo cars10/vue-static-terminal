@@ -124,4 +124,4 @@ None of these are required. All attributes can contain html entities.
 | Attribute | Default | Example   |
 | --------- | ------- | --------- |
 | text      | `''`    | `'xterm'` |
-| toolbar   | <span style="color: lightgrey;">&#9679;</span>&nbsp;&nbsp;<span>&#9679;</span> | `'- X'`   |
+| toolbar   | `<span style="color: lightgrey;">&#9679;</span>&nbsp;&nbsp;<span>&#9679;</span>` | `'- X'`   |
