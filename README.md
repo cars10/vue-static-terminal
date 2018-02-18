@@ -121,4 +121,7 @@ The component accepts the following three props with the following attributes:
 
 None of these are required. All attributes can contain html entities.
 
-<strong>test</strong>1&nbsp;2
+| Attribute | Default | Example   |
+| --------- | ------- | --------- |
+| text      | `''`    | `'xterm'` |
+| toolbar   | <svg width="10" height="10" style="fill: #d3d3d3"><circle cx="50%" cy="50%" r="5"></circle></svg><svg width="10" height="10" style="fill: #fff"><circle cx="50%" cy="50%" r="5"></circle></svg>    | `'- X'`   |
