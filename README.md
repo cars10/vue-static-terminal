@@ -117,8 +117,7 @@ export default {
 
 ## API
 
-The component accepts the following three props with the following attributes:
-
+The component accepts the following three props with the following attributes.
 None of these are required. All attributes can contain html entities.
 
 ### header
@@ -147,5 +146,5 @@ type: array of objects
 | --------- | ---- | ------- | ------- |
 | prompt    | string | `undefined`. The global `prompt` will be used | `'<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>'`
 | command   | string | `''` | `'whoami'` | 
-| result    | string | `''` | `'root' |
+| result    | string | `''` | `'root'` |
 
