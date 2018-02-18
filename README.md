@@ -124,4 +124,4 @@ None of these are required. All attributes can contain html entities.
 | Attribute | Default | Example   |
 | --------- | ------- | --------- |
 | text      | `''`    | `'xterm'` |
-| toolbar   | <svg width="10" height="10" style="fill: #d3d3d3"><circle cx="50%" cy="50%" r="5"></circle></svg><svg width="10" height="10" style="fill: #fff"><circle cx="50%" cy="50%" r="5"></circle></svg>    | `'- X'`   |
+| toolbar   | <span style="color: lightgrey;">&#9679;</span>&nbsp;&nbsp;<span>&#9679;</span> | `'- X'`   |
