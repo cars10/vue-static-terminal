@@ -55,61 +55,36 @@ export default {
 
 Use the component:
 
-```html
-# Empty example
-<vue-static-terminal></vue-static-terminal>
-```
-
-## Examples
-
-Also see [the codepen with examples](https://codepen.io/cars10/pen/KQXxdQ).
-
-Empty terminal
+#### Empty terminal
 ```html
 <vue-static-terminal></vue-static-terminal>
 ```
 
-Some commands
-```html
-<vue-static-terminal :commands="commands"></vue-static-terminal>
-```
 ```javascript
-export default {
-  data: () => {
-    return {
-      commands: [
-        {command: 'ls', result: 'file1 file2'},
-        {command: 'whoami', result: 'root'}
-      ]
-    }
-  }
-}
+export default {}
 ```
 
-Complex example with customization. This is the code for the example in the screenshot.
+#### More complete example
 ```html
 <vue-static-terminal :header="terminal.header" 
-                     :commands="terminal.commands"
-                     :prompt="terminal.prompt"></vue-static-terminal>
+					 :prompt="terminal.prompt" 
+					 :commands="terminal.commands" ></vue-static-terminal>
 ```
 ```javascript
 export default {
   data: () => {
     return {
-      terminal: {
-        header: {
-          text: 'someTerm',
-          toolbar: '&#x2501;&nbsp;&nbsp;&#x2716;'
-        },
-        prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>',
-        commands: [
-            {command: 'whoami', result: 'root'},
-            {command: 'uname -r', result: '4.15.1-2-ARCH'},
-            {command: 'ls -a', result: '<strong>.</strong>&nbsp;&nbsp;<strong>..</strong>&nbsp;&nbsp;README.MD&nbsp;&nbsp;.gitignore&nbsp;&nbsp;<strong>src</strong>'},
-            {command: 'asdf', result: 'command not found: asdf'},
-            {prompt: '<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon><line x1="2" y1="2" x2="8" y2="8" style="stroke:#f00; stroke-width:2"></line><line x1="2" y1="8" x2="8" y2="2" style="stroke:#f00; stroke-width:2"></line></svg>'}
-        ]
-      }
+	  terminal: {
+	    header: {
+		  text: 'some Terminal',
+		  toolbar: '&#x2715;'
+		},
+		prompt: '/ >',
+		commands: [
+		  {command: 'ls', result: 'file1 file2'},
+		  {command: 'whoami', result: 'root'}
+		]
+	  }
     }
   }
 }
