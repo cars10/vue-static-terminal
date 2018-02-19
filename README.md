@@ -64,7 +64,7 @@ Use the component:
 export default {}
 ```
 
-#### More complete example
+#### Simple example
 ```html
 <vue-static-terminal :header="terminal.header"
                      :prompt="terminal.prompt"
