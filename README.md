@@ -4,6 +4,8 @@
 
 ![Screenshot](screenshot.png?raw=true "Screenshot")
 
+Visit [the wiki](https://github.com/cars10/vue-static-terminal/wiki/Examples) for more examples.
+
 ## Installation
 
 ### Via npm
