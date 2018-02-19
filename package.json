@@ -1,6 +1,6 @@
 {
   "name": "vue-static-terminal",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A fully customizable static terminal component for vue.js",
   "keywords": ["vuejs", "terminal", "console"],
   "main": "dist/vue-static-terminal.js",
