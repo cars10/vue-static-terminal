@@ -63,8 +63,8 @@ export default {}
 #### Simple example
 ```html
 <static-terminal :header="terminal.header"
-                     :prompt="terminal.prompt"
-                     :commands="terminal.commands"></vue-static-terminal>
+                 :prompt="terminal.prompt"
+                 :commands="terminal.commands"></vue-static-terminal>
 ```
 ```javascript
 export default {
