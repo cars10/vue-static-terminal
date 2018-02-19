@@ -44,13 +44,7 @@ Loading the minified version will automatically register the component `VueStati
 Load the component:
 
 ```javascript
-// globally
 Vue.use(VueStaticTerminal)
-
-// per component
-export default {
-  components: {VueStaticTerminal}
-}
 ```
 
 Use the component:
