@@ -94,7 +94,12 @@ Visit [the wiki](https://github.com/cars10/vue-static-terminal/wiki/Examples) fo
 
 ## API
 
-The component accepts the following three props with the following attributes.
+The component accepts the following three props:
+
+* `header` - type: object
+* `prompt` - type: string
+* `commands` - type: [object]
+
 None of these are required. All attributes can contain html entities.
 
 ### header
