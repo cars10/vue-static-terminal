@@ -98,9 +98,9 @@ The component accepts the following three props:
 
 * `header` - type: object
 * `prompt` - type: string
-* `commands` - type: [object]
+* `commands` - type: array of objects
 
-None of these are required. All attributes can contain html entities.
+None of these are required, neither are their respective attributes. All attributes can contain html entities.
 
 ### header
 
