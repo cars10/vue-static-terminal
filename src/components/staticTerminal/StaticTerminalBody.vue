@@ -1,7 +1,9 @@
 <template>
   <div class="static_terminal__body">
-    <static-terminal-block v-for="(command, _, index) in commands" :command="command"
-                           :key="index" :prompt="prompt"></static-terminal-block>
+    <div class="static_terminal__command_with_result" v-for="(command, _, index) in commands" :v-key="index">
+      <static-terminal-command :prompt="command.prompt || prompt" :command="command.command"></static-terminal-command>
+      <static-terminal-result :result="command.result"></static-terminal-result>
+    </div>
   </div>
 </template>
 
@@ -13,7 +15,8 @@
 </style>
 
 <script>
-  import StaticTerminalBlock from './StaticTerminalBlock.vue'
+  import StaticTerminalCommand from './StaticTerminalCommand.vue'
+  import StaticTerminalResult from './StaticTerminalResult.vue'
 
   export default {
     props: {
@@ -25,7 +28,8 @@
       prompt: {}
     },
     components: {
-      StaticTerminalBlock
+      StaticTerminalCommand,
+      StaticTerminalResult
     }
   }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div v-html="result"></div>
+  <div class="static_terminal__result" v-html="result"></div>
 </template>
 
 <script>

@@ -1,7 +1,7 @@
 <template>
-  <div class="static_terminal__command">
-    <span class="prompt" v-html="prompt"></span>
-    <span class="command" v-html="command"></span>
+  <div class="static_terminal__command_with_prompt">
+    <span class="static_terminal__prompt" v-html="prompt"></span>
+    <span class="static_terminal__command" v-html="command"></span>
   </div>
 </template>
 
