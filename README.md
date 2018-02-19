@@ -127,7 +127,7 @@ type: object
 | Attribute | Type | Default | Example   |
 | --------- | ---- | ------- | --------- |
 | text      | string | `''`    | `'xterm'` |
-| toolbar   | string | `<span style="color: lightgrey;">&#9679;</span>&nbsp;&nbsp;<span>&#9679;</span>` | `'- X'`   |
+| toolbar   | string | `<span style="color: lightgrey;">&#9679;</span>&nbsp;&nbsp;<span>&#9679;</span>` <span style="color: lightgrey;">&#9679;</span>&nbsp;&nbsp;<span>&#9679;</span> | `'- X'`   |
 
 
 ### prompt
@@ -136,7 +136,7 @@ type: string
 
 | Default | Example |
 | ------- | ------- |
-| `$`     | `'<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>'` |
+| `'$'`     | `'$>'` |
 
 ### commands
 
@@ -144,7 +144,7 @@ type: array of objects
 
 | Attribute | Type | Default | Example |
 | --------- | ---- | ------- | ------- |
-| prompt    | string | `undefined`. The global `prompt` will be used | `'<svg width="15" height="10" style="fill: #fff"><rect width="10" height="10"></rect><polygon points="10 0, 10 10, 15 5"></polygon></svg>'`
+| prompt    | string | `undefined`. The global `prompt` will be used | `'$>'`
 | command   | string | `''` | `'whoami'` | 
 | result    | string | `''` | `'root'` |
 
