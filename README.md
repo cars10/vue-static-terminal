@@ -90,6 +90,8 @@ export default {
 }
 ```
 
+Visit [the wiki](https://github.com/cars10/vue-static-terminal/wiki/Examples) for more examples.
+
 ## API
 
 The component accepts the following three props with the following attributes.
