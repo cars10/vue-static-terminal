@@ -1,7 +1,7 @@
 {
   "name": "vue-static-terminal",
   "version": "1.0.0",
-  "description": "Static terminal component written in vue.js",
+  "description": "A fully customizable static terminal component for vue.js",
   "main": "dist/vue-static-terminal.js",
   "scripts": {
     "build": "webpack --config ./config/webpack.prod.config.js",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/cars10/vue-static-terminal.git"
   },
-  "author": "Carsten König",
+  "author": "Carsten König <carstenkoenig92@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/cars10/vue-static-terminal/issues"
