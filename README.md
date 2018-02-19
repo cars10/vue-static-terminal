@@ -71,23 +71,23 @@ export default {}
                      :commands="terminal.commands"></vue-static-terminal>
 ```
 ```javascript
-  export default {
-    data: () => {
-      return {
-        terminal: {
-          header: {
-            text: 'some Terminal',
-            toolbar: '&#x2715;'
-          },
-          prompt: '/ >',
-          commands: [
-            {command: 'ls', result: 'file1 file2'},
-            {command: 'whoami', result: 'root'}
-          ]
-        }
+export default {
+  data: () => {
+    return {
+      terminal: {
+        header: {
+          text: 'some Terminal',
+          toolbar: '&#x2715;'
+        },
+        prompt: '/ >',
+        commands: [
+          {command: 'ls', result: 'file1 file2'},
+          {command: 'whoami', result: 'root'}
+        ]
       }
     }
   }
+}
 ```
 
 ## API
