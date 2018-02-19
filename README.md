@@ -51,7 +51,7 @@ Use the component:
 
 #### Empty terminal
 ```html
-<vue-static-terminal></vue-static-terminal>
+<static-terminal></vue-static-terminal>
 ```
 
 ```javascript
@@ -60,7 +60,7 @@ export default {}
 
 #### Simple example
 ```html
-<vue-static-terminal :header="terminal.header"
+<static-terminal :header="terminal.header"
                      :prompt="terminal.prompt"
                      :commands="terminal.commands"></vue-static-terminal>
 ```
