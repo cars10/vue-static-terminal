@@ -2,6 +2,7 @@
 
 > A fully customizable static terminal component for vue.js
 
+[![npm version](https://badge.fury.io/js/vue-static-terminal.svg)](https://badge.fury.io/js/vue-static-terminal)
 ![Screenshot](screenshot.png?raw=true "Screenshot")
 
 Visit [the wiki](https://github.com/cars10/vue-static-terminal/wiki/Examples) for more examples.
